@@ -22,7 +22,7 @@ pollutantmean<-function(directory,pollutant,id=1:332){
           num<-num+sum(x)
       }
     }
-    else{
+    else if(pollutant=="nitrate"){
         for(i in 1:len){
             t<-read.csv(name(id[i]))
             s<-s+sum(t$nitrate,na.rm=TRUE)
